@@ -1,20 +1,20 @@
-<body class="body">
+<div class="mainContainer">
 
-  <div class="mainContainer">
+  <div class="titleBox">
+    <h3>
+      Book Catalog system
+    </h3>
+  </div>
 
-    <div class="titleBox">
-      <h3>
-        Book Catalog system
-      </h3>
-    </div>
-
-    <div class="formContainer expandedBox" style="background-color: wheat; ">
-      <app-search-box></app-search-box>
+  <div style="background-color: wheat;  width: 100%;">
+    <app-search-box></app-search-box>
+    <div class="d-flex justify-content-between" style="width: 100%;">
       <app-book-list></app-book-list>
       <app-book-add-update-form></app-book-add-update-form>
-
-
     </div>
+
+
   </div>
-</body>
+</div>
+
 <router-outlet />

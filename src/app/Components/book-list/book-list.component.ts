@@ -28,10 +28,8 @@ export class BookListComponent implements OnInit {
       .subscribe(response => {
 
         console.log(response);
-
+        this.books = response as Book[]
       });
-    // this.books = await this.getContacts();
-    console.log(this.books);
   }
 
   private async getContacts(): Promise<any> {

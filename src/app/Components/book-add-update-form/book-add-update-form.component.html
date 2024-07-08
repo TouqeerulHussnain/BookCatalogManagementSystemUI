@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" style="width: 100%;">
 
     <h2>Add Book to Catalog</h2>
     <form [formGroup]="bookForm">
@@ -7,21 +7,20 @@
             <input formControlName="title" type="text" class="form-control" id="title">
         </div>
         <div class="form-group">
-            <label for="author">Author Name:</label>
+            <label for="authorName">Author Name:</label>
             <input formControlName="authorName" type="text" class="form-control" id="authorName">
         </div>
         <div class="form-group">
-            <label for="publishedDate">Publication Date:</label>
-            <input formControlName="publishedDate" type="date" class="form-control" id="publishedDate">
+            <label for="publicationYear">Publication Year:</label>
+            <input formControlName="publicationYear" type="date" class="form-control" id="publicationYear">
         </div>
         <div class="form-group">
-            <label for="publisher">ISBN</label>
+            <label for="isbn">ISBN:</label>
             <input formControlName="isbn" type="text" class="form-control" id="isbn">
         </div>
-
         <div class="form-group">
             <label for="genre">Genre:</label>
-            <select class="form-control" id="genre">
+            <select formControlName="genre" class="form-control" id="genre">
                 <option value="">Select a genre</option>
                 <option value="Fiction">Fiction</option>
                 <option value="Non-Fiction">Non-Fiction</option>
@@ -31,21 +30,22 @@
         </div>
         <div style="display: flex; flex-direction: row; margin-bottom: 4%;">
             <div class="container">
-                <div class="form-group" style="margin-right: 4%; ">
-                    <label for="Tag">Tags</label>
+                <div class="form-group" style="margin-right: 4%;">
+                    <label for="tags">Tags</label>
                     <input formControlName="tags" type="text" class="form-control" id="tags">
                 </div>
-                <button class="btn btn-primary" style="margin-top: 2%; margin-bottom:2%;">Add Tag</button>
+                <button class="btn btn-primary" style="margin-top: 2%; margin-bottom: 2%;">Add Tag</button>
             </div>
             <div class="container">
                 <div class="form-group">
-                    <label for="Chapter">Chapters</label>
-                    <input formControlName="chapter" type="text" class="form-control" id="chapter">
+                    <label for="chapters">Chapters</label>
+                    <input formControlName="chapters" type="text" class="form-control" id="chapters">
                 </div>
-                <button class="btn btn-primary" style="margin-top: 2%; margin-bottom:2%;">Add Chapter</button>
+                <button class="btn btn-primary" style="margin-top: 2%; margin-bottom: 2%;">Add Chapter</button>
             </div>
         </div>
-        <button class="btn btn-primary container" (click)="FetchFormData()">Add Book</button>
+        <button class="btn btn-primary container" (click)="fetchFormData()">Add Book</button>
     </form>
+
 
 </div>

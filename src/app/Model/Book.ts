@@ -1,16 +1,9 @@
-import { Chapter } from "./Chapter";
-
-
-
 export interface Book {
-    Id: string,
-    Title: string,
-    AuthorName: string,
-    PublicationDate: string,
-    ISBN: string,
-    Genre: string,
-    Tag: [],
-    Chapter: []
-    PageCount: number,
-
+    id?: string,
+    title: string,
+    authorName: string,
+    publicationYear: string,
+    isbn: string,
+    genre: string,
+    pages: number
 }
