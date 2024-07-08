@@ -1,1 +1,51 @@
-<p class="col-6 expandedBox  leftBox">book-add-update-form works!</p>
+<div class="container">
+
+    <h2>Add Book to Catalog</h2>
+    <form [formGroup]="bookForm">
+        <div class="form-group">
+            <label for="title">Title:</label>
+            <input formControlName="title" type="text" class="form-control" id="title">
+        </div>
+        <div class="form-group">
+            <label for="author">Author Name:</label>
+            <input formControlName="authorName" type="text" class="form-control" id="authorName">
+        </div>
+        <div class="form-group">
+            <label for="publishedDate">Publication Date:</label>
+            <input formControlName="publishedDate" type="date" class="form-control" id="publishedDate">
+        </div>
+        <div class="form-group">
+            <label for="publisher">ISBN</label>
+            <input formControlName="isbn" type="text" class="form-control" id="isbn">
+        </div>
+
+        <div class="form-group">
+            <label for="genre">Genre:</label>
+            <select class="form-control" id="genre">
+                <option value="">Select a genre</option>
+                <option value="Fiction">Fiction</option>
+                <option value="Non-Fiction">Non-Fiction</option>
+                <option value="Mystery">Horror</option>
+                <option value="Thriller">Thriller</option>
+            </select>
+        </div>
+        <div style="display: flex; flex-direction: row; margin-bottom: 4%;">
+            <div class="container">
+                <div class="form-group" style="margin-right: 4%; ">
+                    <label for="Tag">Tags</label>
+                    <input formControlName="tags" type="text" class="form-control" id="tags">
+                </div>
+                <button class="btn btn-primary" style="margin-top: 2%; margin-bottom:2%;">Add Tag</button>
+            </div>
+            <div class="container">
+                <div class="form-group">
+                    <label for="Chapter">Chapters</label>
+                    <input formControlName="chapter" type="text" class="form-control" id="chapter">
+                </div>
+                <button class="btn btn-primary" style="margin-top: 2%; margin-bottom:2%;">Add Chapter</button>
+            </div>
+        </div>
+        <button class="btn btn-primary container" (click)="FetchFormData()">Add Book</button>
+    </form>
+
+</div>
